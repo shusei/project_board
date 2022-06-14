@@ -1,5 +1,5 @@
 <?php
-
+// 此檔案使用指令生出 php artisan make:model Board -rmc
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;

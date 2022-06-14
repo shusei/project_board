@@ -1,5 +1,6 @@
 <?php
-
+// 此檔案使用指令生出 php artisan make:model Board -rmc
+// 指令 -r 會使 BoardController.php 載入 CRUD  預設方法
 namespace App\Http\Controllers;
 
 use App\Models\Board;
@@ -17,7 +18,7 @@ class BoardController extends Controller
      */
     public function index()
     {
-        //
+        // 列出所有資料
         $boards = Board::get();
         return response(['data' => $boards], Response::HTTP_OK);
     }
@@ -40,7 +41,7 @@ class BoardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //新增留言
         $board = Board::create($request->all());
         $board = $board->refresh();
 
@@ -55,7 +56,7 @@ class BoardController extends Controller
      */
     public function show(Board $board)
     {
-        //
+        // 查詢單筆資料
         return response($board, Response::HTTP_OK);
     }
 
@@ -79,7 +80,7 @@ class BoardController extends Controller
      */
     public function update(Request $request, Board $board)
     {
-        //
+        // 修改留言，傳入的第一個參數為修改後的留言，第二個參數為修改哪一筆id的留言資料
         $board->update($request->all());
         return response($board, Response::HTTP_OK);
     }
@@ -92,7 +93,7 @@ class BoardController extends Controller
      */
     public function destroy(Board $board)
     {
-        //
+        // 刪除留言
         $board->delete();
         return response(null, Response::HTTP_NO_CONTENT);
     }
