@@ -1,4 +1,9 @@
 <?php
+// 現在是2022年6月15日，很遺憾，經過昨天的Code Review之後，
+// 我們必須重寫，新手尚未了解Laravel之前，需要自己一個一個慢慢刻自己的CRUD function
+// 不能使用指令-r
+// 故此檔案保留，以待後人補完，聖鈞在此拜謝！
+
 // 此檔案使用指令生出 php artisan make:model Board -rmc
 // 指令 -r 會使 BoardController.php 載入 CRUD  預設方法
 namespace App\Http\Controllers;
